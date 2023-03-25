@@ -1,0 +1,44 @@
+[
+  {
+    "id":1,
+    "type": "SMB",
+    "category": "Biotech",
+    "color":"#4545F5",
+    "description": "How Serial 1 Built a Procurement Ecosystem with Precoro’s Core Modules and Extensions"
+  },
+  {
+    "id": 2,
+    "type": "Enterprise",
+    "category": "Textile Testing & Certification",
+    "color": "#1D2452",
+    "description": "How Ridgeline Discovery Reduced Invoice Processing Time by 90% in a Month"
+  },
+  {
+    "id": 3,
+    "type": "SMB",
+    "category": "Insurance",
+    "color": "#7B61FF",
+    "description": "How TESTEX Increased Order Processing Speed by Threefold"
+  },
+  {
+    "id": 4,
+    "type": "Enterprise",
+    "category": "Transport & Logistics",
+    "color": "#9747FF",
+    "description": "Cropnuts Uses Precoro to Streamline Requisitioning and Get Rid of Human Error"
+  },
+  {
+    "id": 5,
+    "type": "SMB",
+    "category": "Information Technology",
+    "color": "#F5455A",
+    "description": "How PassportCard Consolidated Multiple Subsidiaries and Locations under One Sustainable Procurement Workflow"
+  },
+  {
+    "id": 6,
+    "type": "SMB",
+    "category": "Travel & Tourism, Leisure",
+    "color": "#4ED0FF",
+    "description": "How Greater Palm Springs CVB Achieved Operational Efficiency in the Procurement Process"
+  }
+]

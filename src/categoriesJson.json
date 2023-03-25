@@ -1,17 +1,34 @@
 [
   {
-    "categoie": "Biotech"
+    "id": 1,
+    "category": "All"
   },
   {
-    "categoie": "Textile Testing & Certification"
+    "id": 2,
+    "category": "SMB"
   },
   {
-    "categoie": "Insurance"
+    "id": 3,
+    "category": "Enterprise"
   },
   {
-    "categoie": "Transport & Logistics"
+    "id": 4,
+    "category": "Biotech"
   },
   {
-    "categoie": "Information Technology"
+    "id": 5,
+    "category": "Textile Testing & Certification"
   },
+  {
+    "id": 6,
+    "category": "Insurance"
+  },
+  {
+    "id": 7,
+    "category": "Transport & Logistics"
+  },
+  {
+    "id": 8,
+    "category": "Information Technology"
+  }
 ]
