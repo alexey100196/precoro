@@ -46,13 +46,4 @@ export default {
 </script>
 
 <style scoped>
-  .main {
-    margin: 60px auto 135px;
-    max-width: 1080px;
-  }
-  @media screen and (min-width: 960px) {
-    .main {
-      margin: 30px auto 171px;
-    }
-  }
 </style>

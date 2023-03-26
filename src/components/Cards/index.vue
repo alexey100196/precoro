@@ -1,51 +1,46 @@
 <template>
-  <main class="main">
-    <Filter @selectByCat="filterByCat" :categories="categories" :id="id"/>
-    <Cards :cards="this.data"/>
-  </main>
-
-  <div class="card-wrap">
-    <div class="swiper-button-prev" />
-    <swiper-container
-        class="swiper-container"
-        :allowTouchMove="false"
-        :observer="true"
-        :observeParents="true"
-        :navigation=" {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }"
-        :pagination="{
-        el: '.swiper-pagination',
-        type: 'fraction',
-      }"
-        :centeredSlides="true"
-        :slidesPerView="1"
-        :slidesPerGroup="1"
-        :observeSlideChildren="true"
-        :grid="{
-          fill: 'row',
-          rows: 2,
+    <div class="card-wrap">
+      <div class="swiper-button-prev" />
+      <swiper-container
+          class="swiper-container"
+          :allowTouchMove="false"
+          :observer="true"
+          :observeParents="true"
+          :navigation=" {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         }"
-        :breakpoints="{
-          960: {
-            allowTouchMove: true,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            centeredSlides: false,
-            grid: {
-              rows: 1
+          :pagination="{
+          el: '.swiper-pagination',
+          type: 'fraction',
+        }"
+          :centeredSlides="true"
+          :slidesPerView="1"
+          :slidesPerGroup="1"
+          :observeSlideChildren="true"
+          :grid="{
+            fill: 'row',
+            rows: 2,
+          }"
+          :breakpoints="{
+            960: {
+              allowTouchMove: true,
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+              centeredSlides: false,
+              grid: {
+                rows: 1
+              }
             }
-          }
-        }"
-    >
-      <swiper-slide v-for="card in cards" :key="card.id">
-        <Card :info="card"/>
-      </swiper-slide>
-    </swiper-container>
-    <div class="swiper-button-next" />
-    <div class="swiper-pagination" />
-  </div>
+          }"
+      >
+        <swiper-slide v-for="card in cards" :key="card.id">
+          <Card :info="card"/>
+        </swiper-slide>
+      </swiper-container>
+      <div class="swiper-button-next" />
+      <div class="swiper-pagination" />
+    </div>
 </template>
 
 <script>
