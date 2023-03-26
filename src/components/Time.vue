@@ -17,5 +17,6 @@ export default {
 <style scoped>
   .time {
     margin: 10px 4px;
+    padding-top: 10px;
   }
 </style>

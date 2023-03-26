@@ -4,12 +4,12 @@ import HomeView from '@/views/CardsView.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'cards',
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/investment',
+    name: 'investment',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

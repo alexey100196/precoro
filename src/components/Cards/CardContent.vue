@@ -92,14 +92,13 @@ export default {
 <style scoped>
   .card-content {
     max-height: 240px;
-    padding: 32px 37px 32px 32px;
+    padding: 16px 37px 32px 32px;
   }
   .tag-swiper-container {
     display: flex;
     align-items: center;
   }
   .tag-content {
-    margin-bottom: 12px;
     position: relative;
   }
   .tag-content:after {

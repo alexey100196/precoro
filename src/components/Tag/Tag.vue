@@ -1,5 +1,7 @@
 <template>
+  <div class="tag-wrap">
     <div class="tag p-tag" :style='{backgroundColor: statusParams.bgc, color: statusParams.tc}'>{{ name }}</div>
+  </div>
 </template>
 
 <script>
@@ -38,6 +40,12 @@ export default {
 </script>
 
 <style scoped>
+  .tag-wrap {
+    padding: 16px 0;
+  }
+  .tag-wrap:hover .tag {
+    opacity: 0.9;
+  }
   .tag {
     display: flex;
     align-items: center;
@@ -48,9 +56,6 @@ export default {
     padding: 4px 12px;
     margin-right: 4px;
     white-space: nowrap;
-  }
-  .tag:hover {
-    opacity: 0.9;
   }
 
 </style>

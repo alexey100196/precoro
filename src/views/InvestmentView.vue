@@ -8,7 +8,9 @@
           <img :src="svg.planCheck" alt="plan-check" class="plan-check"/> {{plan}}
         </li>
       </ul>
-      <div class="p-button plans-btn">See all features</div>
+      <div class="p-button plans-btn">See all features
+        <img :src="textBtnArrow" alt="arrow" class="arrow-text-btn"/>
+      </div>
     </div>
     <div>
     <h1 class="p-Header-2 mobile-title">Estimate your <br>investment</h1>
@@ -263,8 +265,5 @@ export default {
   }
   .plan-check {
     margin-right: 15px;
-  }
-  .arrow-text-btn {
-    margin-left: 12px;
   }
 </style>
