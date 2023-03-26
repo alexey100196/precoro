@@ -1,25 +1,25 @@
-.p-title {
+.p-title, .p-small-title, .p-body-2,
+.p-body-2-semibold, .p-tagline, p-button, .p-tag {
     font-family: 'Inter';
     font-style: normal;
+}
+.p-title {
     font-weight: 600;
     font-size: 22px;
     line-height: 32px;
 }
 .p-small-title {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
 }
-.p-body-2{
-    font-size: 14px;
-    display: none;
+.p-body-2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
 }
 @media screen and (min-width: 960px) {
     .p-body-2 {
-        font-family: 'Inter';
-        font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
@@ -27,30 +27,51 @@
     }
 }
 .p-body-2-semibold {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
 }
 .p-tagline {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
 }
 .p-button {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
 }
 .p-tag {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
 }
+
+.p-Header-1, .p-Header-2,
+.p-Header-3, .p-header-3-mobile {
+    font-family: 'Literata';
+    font-style: normal;
+    font-weight: 700;
+
+}
+.p-Header-1 {
+    font-size: 52px;
+    line-height: 56px;
+}
+
+.p-Header-2 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.p-Header-3 {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.p-header-3-mobile {
+    font-size: 26px;
+    line-height: 32px;
+}
+
+
