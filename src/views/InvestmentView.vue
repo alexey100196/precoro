@@ -15,59 +15,9 @@
     <div>
     <h1 class="p-Header-2 mobile-title">Estimate your <br>investment</h1>
     <p class="p-tag mobile-desc">How many users?</p>
+    <Select :currencyPrice="currency.price"/>
     <Currency @handleCur="getCurrency" :handleCur="handleCur"/>
-    <VueSlider class="slider"
-      :height="6"
-      v-model="sliderInitialValue"
-      :marks="{
-        '0': 0,
-        '20': 20,
-        '40': '∞'
-      }"
-      :step-style="{
-        backgroundColor: '#ffffff',
-        height: '6px',
-        width: '3px',
-        border: 'none',
-        borderRadius: 'inherit',
-        boxShadow: 'none',
-      }"
-      :labelActiveStyle="{
-        display: 'none',
-      }"
-      :stepActiveStyle="{
-        border: 'none',
-      }"
-      :max="40"
-      :min="1"
-      :tooltip-formatter="`${sliderInitialValue} ${sliderInitialValue <= 1 ? `user` : 'users'}`"
-      tooltip="always"
-      :dotStyle="{
-        backgroundColor: '#4545F5'
-      }"
-      :railStyle="{
-        backgroundColor:' #DDDEE5'
-      }"
-      :process-style="{
-        backgroundColor: '#4545F5'
-      }"
-      :dot-options="{
-        style: {
-          border: 'none',
-          boxShadow: 'none',
-          backgroundColor: '#4545F5'
-        },
-        focusStyle: {
-          border: 'none',
-        }
-      }"
-      dotSize="20"
-    >
-      <template v-slot:tooltip="{ value, focus }">
-        <div :class="['custom-tooltip', 'p-body-2', { focus }]">{{value}} {{ value <= 1 ? `user` : 'users' }}</div>
-        <div :class="['custom-tooltip__bottom', 'p-small-title' ]">${{ priceForYears }}/year</div>
-      </template>
-    </VueSlider>
+      <Slider :currency="currency" :sliderInitialValue="sliderInitialValue"/>
       <div class="plan-cards-wrap">
         <PlanCard
           :isActive="sliderInitialValue <= 20"
@@ -102,21 +52,22 @@
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue'
-import VueSlider from 'vue-slider-component'
 import PlanCard from '@/components/Plans/PlanCard'
 import Currency from '@/components/Plans/Currency'
-import 'vue-slider-component/theme/antd.css'
+import Select from '@/components/Plans/Select'
+import Slider from "@/components/Plans/Slider"
 import planCheck from "@/assets/images/plan-check.svg"
 import planCard20 from "@/assets/images/plan-card<20.svg"
 import planCard21 from "@/assets/images/plan-card>20.svg"
 import textBtnArrow from "@/assets/images/arrow-text-btn.png"
+import {reactive, toRefs} from "vue";
 
 export default {
   components: {
-    VueSlider,
     PlanCard,
-    Currency
+    Currency,
+    Select,
+    Slider
   },
   data() {
     return {
@@ -144,12 +95,9 @@ export default {
       ],
     }
   },
-  computed: {
-    priceForYears() {
-      const MONTH = 12
-      const parseInit = (this.currency.price * MONTH * this.sliderInitialValue).toLocaleString()
-      return parseInit.split(' ').join(',')
-    }
+  setup() {
+    const data = reactive({ sliderInitialValue: 1 })
+    return toRefs(data)
   },
   methods: {
     getCurrency(cur) {
@@ -157,10 +105,7 @@ export default {
       this.handleCur = cur.id
     }
   },
-  setup() {
-    const data = reactive({ sliderInitialValue: 1 })
-    return toRefs(data)
-  },
+
   created() {
     this.currency.price = 35
   }
@@ -240,25 +185,6 @@ export default {
   }
   .plans-title {
     margin-bottom: 24px;
-  }
-  .slider {
-    margin-bottom: 96px;
-    display: none;
-  }
-  @media screen and (min-width: 960px) {
-    .slider {
-      flex-direction: row;
-      display: block;
-    }
-  }
-  .custom-tooltip, custom-tooltip__bottom {
-    text-align: center;
-  }
-  .custom-tooltip {
-    transform: translateY(30px);
-  }
-  .custom-tooltip__bottom {
-    transform: translateY(60px);
   }
   li {
     margin-bottom: 12px;

@@ -108,7 +108,7 @@ export default {
     right: -15px;
     z-index: 1;
     display: block;
-    height: 40px;
+    height: 72px;
     width: 80px;
     background-image: linear-gradient(to right, rgba(255,0,0,0) 0%, rgba(255,255,255,0.9) 64%);
   }
