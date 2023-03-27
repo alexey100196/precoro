@@ -1,5 +1,6 @@
 <template>
   <article :style="!isActive ?  'opacity: .55' : ''" class="plan-card">
+    {{isActive}}
     <h3 class="p-title plan-card__title">
       {{ title }}
     </h3>

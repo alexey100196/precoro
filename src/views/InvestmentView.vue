@@ -17,7 +17,7 @@
     <p class="p-tag mobile-desc">How many users?</p>
     <Select :currencyPrice="currency.price"/>
     <Currency @handleCur="getCurrency" :handleCur="handleCur"/>
-      <Slider :currency="currency" :sliderInitialValue="sliderInitialValue"/>
+      <Slider v-model="sliderInitialValue" :currency="currency" :sliderInitialValue="sliderInitialValue"/>
       <div class="plan-cards-wrap">
         <PlanCard
           :isActive="sliderInitialValue <= 20"
@@ -103,6 +103,9 @@ export default {
     getCurrency(cur) {
       this.currency.price = cur.price
       this.handleCur = cur.id
+    },
+    update(e) {
+      console.log(e);
     }
   },
 

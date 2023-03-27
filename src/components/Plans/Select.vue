@@ -45,6 +45,11 @@ export default {
   max-width: 280px;
   margin: 0 auto 25px;
 }
+@media screen and (min-width: 960px) {
+  .select-wrap {
+    display: none;
+  }
+}
 >>> {
   --vs-controls-color: #1D2452;
   /*--vs-border-color: #4545F5;*/
